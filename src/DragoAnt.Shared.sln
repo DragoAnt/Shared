@@ -53,6 +53,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".slnItems", ".slnItems", "{
 		Directory.Packages.Metadata.targets = Directory.Packages.Metadata.targets
 		PackageAsProj.targets = PackageAsProj.targets
 		Directory.PackageAsProj.targets = Directory.PackageAsProj.targets
+		version.props = version.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipeline", "pipeline", "{AF173CD7-5E70-4E5E-A7F2-11D6058C25C4}"
