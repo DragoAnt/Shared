@@ -2,7 +2,8 @@
 
 <Project>
 
-  <PropertyGroup Condition="'$(IsTestProject)'=='true'">
+  <PropertyGroup Condition="'$(IsTestsProject)'=='true'">
+    <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
     <MSBuildTreatWarningsAsErrors>False</MSBuildTreatWarningsAsErrors>
   </PropertyGroup>
@@ -10,9 +11,9 @@
   <Import Project="$(MSBuildThisFileDirectory)tests.project.code.coverage.targets" />
   <Import Project="$(MSBuildThisFileDirectory)code.coverage.targets" />
 
-  <Import Condition="'$(IsTestProject)'=='true'"
+  <Import Condition="'$(IsTestsProject)'=='true'"
           Project="$(MSBuildThisFileDirectory)tests.project.packages.targets" />
-  <Import Condition="'$(IsTestProject)'=='true' Or '$(HasTestProjectPackages)'=='true'"
+  <Import Condition="'$(IsTestsProject)'=='true' Or '$(HasTestProjectPackages)'=='true'"
           Project="$(MSBuildThisFileDirectory)tests.project.lib.packages.targets" />
 
 </Project>
