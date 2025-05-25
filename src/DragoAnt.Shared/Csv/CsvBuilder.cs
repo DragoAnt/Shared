@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace DragoAnt.Shared.Csv;
 
@@ -39,8 +38,5 @@ public sealed class CsvBuilder
 #endif
     }
 
-    public string Build()
-    {
-        return _sbuilder.ToString();
-    }
+    public string Build() => _sbuilder.ToString();
 }

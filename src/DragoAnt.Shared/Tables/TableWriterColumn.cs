@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DragoAnt.Shared.Tables;
+﻿namespace DragoAnt.Shared.Tables;
 
 public class TableWriterColumn
 {

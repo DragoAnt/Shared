@@ -40,18 +40,6 @@
       Condition="!Exists('%(LocalCompileFile.Identity)') and '%(LocalCompileFile.Text)' != ''"
       Lines="%(LocalCompileFile.Text)" />
 
-    <!--    <WriteLinesToFile-->
-    <!--      File="@(LocalCompileFile)"-->
-    <!--      Overwrite="true"-->
-    <!--      Condition="!Exists('@(LocalCompileFile)') AND '%(LocalCompileFile.Text)'==''" Lines="namespace $(RootNamespace)%3B">-->
-    <!--    </WriteLinesToFile>-->
-
-    <!--    <WriteLinesToFile-->
-    <!--      File="@(LocalCompileFile)"-->
-    <!--      Overwrite="true"-->
-    <!--      Condition="!Exists('@(LocalCompileFile)') AND '%(LocalCompileFile.Text)'!=''" Lines="%(LocalCompileFile.Text)">-->
-    <!--    </WriteLinesToFile>-->
-
   </Target>
 
 </Project>

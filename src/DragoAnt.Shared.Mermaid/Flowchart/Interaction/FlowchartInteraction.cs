@@ -1,5 +1,4 @@
-﻿using System;
-using DragoAnt.Shared.Text;
+﻿using DragoAnt.Shared.Text;
 
 namespace DragoAnt.Shared.Mermaid.Flowchart.Interaction;
 

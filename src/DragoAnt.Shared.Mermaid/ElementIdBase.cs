@@ -1,5 +1,3 @@
-using System;
-
 namespace DragoAnt.Shared.Mermaid;
 
 public abstract class ElementIdBase : ElementBase, IEquatable<ElementIdBase>
