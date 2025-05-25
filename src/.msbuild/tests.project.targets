@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project InitialTargets="CreateRunnerJson">
-
-  <PropertyGroup Condition="'$(IsTestsProject)'=='true'">
-    <OutputType>Exe</OutputType>
-    <IsPackable>false</IsPackable>
-    <MSBuildTreatWarningsAsErrors>false</MSBuildTreatWarningsAsErrors>
-    <!--
-      To enable the Microsoft Testing Platform 'dotnet test' experience, add property:
-        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-  
-      To enable the Microsoft Testing Platform native command line experience, add property:
-      <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-        <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
-  
-      For more information on Microsoft Testing Platform support in xUnit.net, please visit:
-        https://xunit.net/docs/getting-started/v3/microsoft-testing-platform
-      -->
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(IsTestsProject)'=='true'">
-    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
+<Project>
 
   <Import Project="$(MSBuildThisFileDirectory)tests.project.code.coverage.targets" />
   <Import Project="$(MSBuildThisFileDirectory)code.coverage.targets" />
@@ -30,22 +9,7 @@
           Project="$(MSBuildThisFileDirectory)tests.project.packages.targets" />
   <Import Condition="'$(IsTestsProject)'=='true' Or '$(HasTestProjectPackages)'=='true'"
           Project="$(MSBuildThisFileDirectory)tests.project.lib.packages.targets" />
-
-  <!-- Target to create xunit.runner.json file -->
-  <Target Condition="'$(IsTestsProject)'=='true' AND !Exists('xunit.runner.json')"
-          Name="CreateRunnerJson">
-
-    <PropertyGroup>
-      <!--      @formatter:off-->
-      <XunitRunnerJson>{
-    "$schema": "https://xunit.net/schema/current/xunit.runner.schema.json"
-}
-      </XunitRunnerJson>
-      <!--      @formatter:on-->
-    </PropertyGroup>
-
-    <!-- Write an empty JSON object to the file if it doesn't exist -->
-    <WriteLinesToFile File="xunit.runner.json" Overwrite="true" Lines="$(XunitRunnerJson)" />
-  </Target>
+  <Import Condition="'$(IsTestsProject)'=='true'"
+          Project="$(MSBuildThisFileDirectory)tests.project.routine.targets" />
 
 </Project>

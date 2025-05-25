@@ -19,6 +19,7 @@ ProjectSection(SolutionItems) = preProject
 	.msbuild\tests.project.packages.targets = .msbuild\tests.project.packages.targets
 	.msbuild\tests.project.lib.packages.targets = .msbuild\tests.project.lib.packages.targets
 	.msbuild\tests.project.code.coverage.targets = .msbuild\tests.project.code.coverage.targets
+	.msbuild\tests.project.routine.targets = .msbuild\tests.project.routine.targets
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".workflows", ".workflows", "{1EEB475D-C4E1-4DD8-BE10-44D2185F355B}"
