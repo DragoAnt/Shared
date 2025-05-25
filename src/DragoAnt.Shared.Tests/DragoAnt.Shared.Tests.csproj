@@ -1,9 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\DragoAnt.Shared\DragoAnt.Shared.csproj" />
   </ItemGroup>
