@@ -1,15 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" />
-    <PackageReference Include="NUnit" />
-    <PackageReference Include="NUnit3TestAdapter" />
-    <PackageReference Include="coverlet.collector" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DragoAnt.Shared.Mermaid\DragoAnt.Shared.Mermaid.csproj" />
+    <ProjectReference Include="..\DragoAnt.Shared.Mermaid\DragoAnt.Shared.Mermaid.csproj"/>
   </ItemGroup>
 
 </Project>

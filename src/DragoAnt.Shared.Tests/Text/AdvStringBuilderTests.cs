@@ -1,16 +1,13 @@
-﻿#nullable enable
-using System.Text;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using System.Text;
 using DragoAnt.Shared.Text;
 
 namespace DragoAnt.Shared.Tests.Text;
 
-[TestFixture]
 public class AdvStringBuilderTests
 {
-    [TestCase("  ")]
-    [TestCase("\t")]
+    [Theory]
+    [InlineData("  ")]
+    [InlineData("\t")]
     public void CheckIdentTest(string identChunk)
     {
         var sb = new AdvStringBuilder(identChunk);
@@ -39,6 +36,7 @@ public class AdvStringBuilderTests
         {
             stringBuilder.Append(identChunk);
         }
+
         return stringBuilder.ToString();
     }
 }

@@ -9,4 +9,6 @@
 
   <Import Project="$(MSBuildThisFileDirectory)Directory.PackageAsProj.targets"/>
   <Import Project="$(MSBuildThisFileDirectory).msbuild\packageAsProj.routine.targets"/>
+
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\tests.project.targets"/>
 </Project>
