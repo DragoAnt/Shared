@@ -20,7 +20,7 @@
   <Import Project="$(MSBuildThisFileDirectory).msbuild\product.props" />
   <Import Project="$(MSBuildThisFileDirectory)version.props" />
 
-  <PropertyGroup Condition="'$(IsTestsProject)'=='True'">
+  <PropertyGroup Condition="'$(IsTestProject)'=='True'">
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
 

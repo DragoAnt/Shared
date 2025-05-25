@@ -3,8 +3,8 @@
 <Project>
   <PropertyGroup>
 
-    <!-- Set IsTestsProject to true if the project file name ends with "Tests" -->
-    <IsTestsProject>$(MSBuildProjectName.EndsWith(".Tests"))</IsTestsProject>
+    <!-- Set IsTestProject to true if the project file name ends with "Tests" -->
+    <IsTestProject>$(MSBuildProjectName.EndsWith(".Tests"))</IsTestProject>
 
   </PropertyGroup>
 </Project>

@@ -3,11 +3,11 @@
 <Project>
 
   <!--  Exclude tests projects from code coverage by default-->
-  <PropertyGroup Condition="'$(IsTestsProject)'=='true' And '$(ExcludeFromCodeCoverage)'==''">
+  <PropertyGroup Condition="'$(IsTestProject)'=='true' And '$(ExcludeFromCodeCoverage)'==''">
     <ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(IsTestsProject)'=='true'">
+  <ItemGroup Condition="'$(IsTestProject)'=='true'">
     <PackageReference Include="coverlet.collector" />
   </ItemGroup>
 
