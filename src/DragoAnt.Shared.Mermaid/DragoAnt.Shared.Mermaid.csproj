@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Net wrapper for Mermaid(more on https://mermaid-js.github.io/)</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DragoAnt.Shared\DragoAnt.Shared.csproj"/>
+  </ItemGroup>
+
+</Project>

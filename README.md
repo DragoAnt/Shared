@@ -1,2 +1,1 @@
-# Shared
-Shared packages
+# Shared common nuget packages
