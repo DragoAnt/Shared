@@ -27,7 +27,8 @@
   <Target Condition="!Exists('xunit.runner.json')" Name="CreateXUnitRunnerJson">
     <PropertyGroup>
       <!--      @formatter:off-->
-      <XunitRunnerJson>{
+      <XunitRunnerJson>
+{
         "$schema": "https://xunit.net/schema/current/xunit.runner.schema.json"
         }
       </XunitRunnerJson>

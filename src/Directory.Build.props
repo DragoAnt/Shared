@@ -24,4 +24,9 @@
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(IsTestsProject)'!='True'">
+    <TestsDir>$(MSBuildThisFileDirectory)</TestsDir>
+    <InternalsVisibleToAllTestsProjects>true</InternalsVisibleToAllTestsProjects>
+  </PropertyGroup>
+
 </Project>
