@@ -14,7 +14,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <MSBuildTreatWarningsAsErrors>True</MSBuildTreatWarningsAsErrors>
   </PropertyGroup>
 
   <Import Project="$(MSBuildThisFileDirectory).msbuild\tests.project.props" />
