@@ -2,6 +2,12 @@
 
 <Project>
 
+  <PropertyGroup Condition="'$(IsTestsProject)'=='true'">
+    <IsPackable>false</IsPackable>
+    <MSBuildTreatWarningsAsErrors>False</MSBuildTreatWarningsAsErrors>
+    <UseAppHost>false</UseAppHost>
+  </PropertyGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)tests.project.code.coverage.targets" />
   <Import Project="$(MSBuildThisFileDirectory)code.coverage.targets" />
 
