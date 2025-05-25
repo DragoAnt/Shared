@@ -5,10 +5,15 @@ VisualStudioVersion = 16.0.30524.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".msbuild", ".msbuild", "{BA3CF70D-79A2-4BD5-AE60-C4485E591D87}"
 ProjectSection(SolutionItems) = preProject
-	.msbuild\build.props = .msbuild\build.props
-	.msbuild\package.props = .msbuild\package.props
 	.msbuild\product.props = .msbuild\product.props
-	.msbuild\version.props = .msbuild\version.props
+	.msbuild\package.icon.png = .msbuild\package.icon.png
+	.msbuild\code.coverage.targets = .msbuild\code.coverage.targets
+	.msbuild\local.directory.secrets.props = .msbuild\local.directory.secrets.props
+	.msbuild\local.directory.secrets.targets = .msbuild\local.directory.secrets.targets
+	.msbuild\local.cs.files.targets = .msbuild\local.cs.files.targets
+	.msbuild\local.secrets.targets = .msbuild\local.secrets.targets
+	.msbuild\packageAsProj.routine.targets = .msbuild\packageAsProj.routine.targets
+	.msbuild\package.targets = .msbuild\package.targets
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".workflows", ".workflows", "{1EEB475D-C4E1-4DD8-BE10-44D2185F355B}"
@@ -40,6 +45,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".slnItems", ".slnItems", "{
 		global.json = global.json
 		nuget.config = nuget.config
 		Directory.Packages.Metadata.targets = Directory.Packages.Metadata.targets
+		PackageAsProj.targets = PackageAsProj.targets
+		Directory.PackageAsProj.targets = Directory.PackageAsProj.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipeline", "pipeline", "{AF173CD7-5E70-4E5E-A7F2-11D6058C25C4}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build_and_publish_nuget.yml = ..\.github\workflows\build_and_publish_nuget.yml
 	EndProjectSection
 EndProject
 Global
@@ -87,5 +99,6 @@ Global
 		{41E7A151-5DB6-4026-A75E-FF32A0E761A9} = {4D0A2092-01C6-4396-A117-31263DD64D57}
 		{719F6D4B-4A37-4900-B857-B3274DB84597} = {4D0A2092-01C6-4396-A117-31263DD64D57}
 		{236275F9-4CE3-45B6-8973-B7B69907E4A7} = {4D0A2092-01C6-4396-A117-31263DD64D57}
+		{AF173CD7-5E70-4E5E-A7F2-11D6058C25C4} = {517DD102-E451-4D90-B7D4-E26E25E4437A}
 	EndGlobalSection
 EndGlobal

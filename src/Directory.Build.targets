@@ -3,4 +3,10 @@
 
   <Import Project="$(MSBuildThisFileDirectory)Directory.Packages.Metadata.targets"/>
 
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\package.targets"/>
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\local.directory.secrets.targets"/>
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\local.secrets.targets"/>
+
+  <Import Project="$(MSBuildThisFileDirectory)Directory.PackageAsProj.targets"/>
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\packageAsProj.routine.targets"/>
 </Project>

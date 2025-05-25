@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 
-    <Import Project="$(MSBuildThisFileDirectory).msbuild\product.props" />
-    <Import Project="$(MSBuildThisFileDirectory).msbuild\package.props" />
-    <Import Project="$(MSBuildThisFileDirectory).msbuild\version.props" />
-    <Import Project="$(MSBuildThisFileDirectory).msbuild\build.props" />
+  <PropertyGroup>
+    <RepositoryUrl>https://github.com/DragoAnt/Shared</RepositoryUrl>
+
+    <NETCoreTargetFrameworks>net7.0;net8.0;net9.0</NETCoreTargetFrameworks>
+    <IsTestsProject>$(MSBuildProjectName.EndsWith(".Tests"))</IsTestsProject>
+
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;EF1001;</NoWarn>
+
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <MSBuildTreatWarningsAsErrors>True</MSBuildTreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsTestsProject)'=='True'">
+    <TargetFrameworks>$(NETCoreTargetFrameworks)</TargetFrameworks>
+    <MSBuildTreatWarningsAsErrors>False</MSBuildTreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsTestsProject)'!='True'">
+    <TargetFrameworks>$(NETCoreTargetFrameworks);netstandard2.0;netstandard2.1</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory).msbuild\product.props"/>
+  <Import Project="$(MSBuildThisFileDirectory)version.props"/>
 
 </Project>
