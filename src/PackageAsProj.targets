@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <_AsProj_DragoAnt_Shared>false</_AsProj_DragoAnt_Shared>
-    <_AsProj_DragoAnt_Shared Condition="'$(PackageAsProj_DragoAnt_Shared)'=='true'">true</_AsProj_DragoAnt_Shared>
+    <_AsProj_DragoAnt_Shared Condition="'$(PackageAsProj_DragoAnt)'=='true' Or '$(PackageAsProj_DragoAnt_Shared)'=='true'">true</_AsProj_DragoAnt_Shared>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Update="DragoAnt.Shared"

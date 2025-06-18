@@ -1,0 +1,16 @@
+<!--This is entry .targets for attach all DragoAnt packages as sources-->
+<Project>
+
+  <PropertyGroup>
+    <DragoAnt_SharedPath>$(MSBuildThisFileDirectory)src\PackageAsProj.targets</DragoAnt_SharedPath>
+    <DragoAnt_EntityFrameworkCorePath>$(MSBuildThisFileDirectory)..\EntityFrameworkCore\src\PackageAsProj.targets</DragoAnt_EntityFrameworkCorePath>
+    <DragoAnt_ExtensionsT4Path>$(MSBuildThisFileDirectory)..\Extensions.T4\src\PackageAsProj.targets</DragoAnt_ExtensionsT4Path>
+    <DragoAnt_ExtensionsSystemTextJsonPath>$(MSBuildThisFileDirectory)..\Extensions.System.Text.Json\PackageAsProj.targets</DragoAnt_ExtensionsSystemTextJsonPath>
+  </PropertyGroup>
+
+  <Import Condition="Exists('$(DragoAnt_SharedPath)')" Project="$(DragoAnt_SharedPath)" />
+  <Import Condition="Exists('$(DragoAnt_EntityFrameworkCorePath)')" Project="$(DragoAnt_EntityFrameworkCorePath)" />
+  <Import Condition="Exists('$(DragoAnt_ExtensionsT4Path)')" Project="$(DragoAnt_ExtensionsT4Path)" />
+  <Import Condition="Exists('$(DragoAnt_ExtensionsSystemTextJsonPath)')" Project="$(DragoAnt_ExtensionsSystemTextJsonPath)" />
+
+</Project>
