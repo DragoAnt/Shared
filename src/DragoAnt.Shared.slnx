@@ -1,0 +1,29 @@
+<Solution>
+  <Folder Name="/.common/">
+    <File Path="../DragoAnt.PackageAsProj.targets" />
+    <File Path="../README.md" />
+    <File Path="../global.json" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.PackageAsProj.targets" />
+    <File Path="Directory.Packages.Metadata.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="Directory.Version.props" />
+    <File Path="PackageAsProj.targets" />
+    <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/.pipelines/">
+    <File Path="../.github/dependabot.yml" />
+    <File Path="../.github/workflows/ci.yml" />
+    <File Path="../.github/workflows/release.yml" />
+  </Folder>
+  <Folder Name="/.tests/">
+    <Project Path="DragoAnt.Shared.Csv.Tests/DragoAnt.Shared.Csv.Tests.csproj" />
+    <Project Path="DragoAnt.Shared.Mermaid.Tests/DragoAnt.Shared.Mermaid.Tests.csproj" />
+    <Project Path="DragoAnt.Shared.Tests/DragoAnt.Shared.Tests.csproj" />
+  </Folder>
+  <Project Path="DragoAnt.Shared.AspNetCore/DragoAnt.Shared.AspNetCore.csproj" />
+  <Project Path="DragoAnt.Shared.Csv/DragoAnt.Shared.Csv.csproj" />
+  <Project Path="DragoAnt.Shared.Mermaid/DragoAnt.Shared.Mermaid.csproj" />
+  <Project Path="DragoAnt.Shared/DragoAnt.Shared.csproj" />
+</Solution>

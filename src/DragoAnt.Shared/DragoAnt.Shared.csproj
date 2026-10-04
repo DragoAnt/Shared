@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Common extensions</Description>
+    <Description>Common .NET helpers: embedded resource files, a CSV and table writer, an indentation-aware string builder and reflection extensions.</Description>
+    <PackageTags>extensions;helpers;csv;embedded-resources;stringbuilder;reflection</PackageTags>
   </PropertyGroup>
 
 </Project>

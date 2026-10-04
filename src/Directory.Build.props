@@ -1,32 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project>
 
   <PropertyGroup>
-    <RepositoryUrl>https://github.com/DragoAnt/Shared</RepositoryUrl>
-
     <TargetFrameworks>net7.0;net8.0;net9.0;netstandard2.0;netstandard2.1</TargetFrameworks>
-    <IsPackable>true</IsPackable>
+    <Copyright>Copyright (c) 2025 DragoAnt</Copyright>
 
     <LangVersion>latest</LangVersion>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);CS1591;EF1001;</NoWarn>
-
+    <NoWarn>$(NoWarn);EF1001;</NoWarn>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+    <MSKit_TestsAssertions>FluentAssertions</MSKit_TestsAssertions>
   </PropertyGroup>
 
-  <Import Project="$(MSBuildThisFileDirectory).msbuild\tests.project.props" />
-  <Import Project="$(MSBuildThisFileDirectory).msbuild\product.props" />
-  <Import Project="$(MSBuildThisFileDirectory)version.props" />
+  <Import Project="$(MSBuildThisFileDirectory).toolkit/msbuild/init.props" />
 
   <PropertyGroup Condition="'$(IsTestsProject)'=='True'">
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(IsTestsProject)'!='True'">
-    <TestsDir>$(MSBuildThisFileDirectory)</TestsDir>
-    <InternalsVisibleToAllTestsProjects>true</InternalsVisibleToAllTestsProjects>
   </PropertyGroup>
 
 </Project>

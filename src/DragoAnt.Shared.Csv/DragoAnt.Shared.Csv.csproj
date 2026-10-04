@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Csv common extensions</Description>
+    <Description>Read CSV files and embedded CSV resources into typed records with CsvHelper.</Description>
+    <PackageTags>csv;csvhelper;embedded-resources;extensions</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

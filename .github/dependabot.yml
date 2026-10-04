@@ -1,0 +1,36 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - actions/*
+          - DragoAnt/*
+          - NuGet/*
+
+  - package-ecosystem: nuget
+    directory: /src
+    schedule:
+      interval: weekly
+    groups:
+      microsoft:
+        patterns:
+          - Microsoft.*
+          - System.*
+      testing:
+        patterns:
+          - xunit*
+          - Verify*
+          - FluentAssertions
+    ignore:
+      # 8.x requires a commercial license.
+      - dependency-name: FluentAssertions
+        update-types:
+          - version-update:semver-major
+      # 2.x is the line that still targets netstandard2.0 and net7.0.
+      - dependency-name: Microsoft.AspNetCore.Http.Abstractions
+        update-types:
+          - version-update:semver-major
