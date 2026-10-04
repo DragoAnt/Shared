@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Net wrapper for Mermaid(more on https://mermaid-js.github.io/)</Description>
+    <Description>Build Mermaid flowchart diagrams from .NET code and render them as Mermaid text.</Description>
+    <PackageTags>mermaid;diagram;flowchart;markdown</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
