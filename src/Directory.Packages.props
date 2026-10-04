@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="CsvHelper" Version="33.0.1"/>
+    <PackageVersion Include="CsvHelper" Version="33.1.0"/>
     <PackageVersion Include="DragoAnt.Extensions.T4" Version="1.0.1"/>
     <PackageVersion Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0"/>
   </ItemGroup>
